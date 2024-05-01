@@ -1,0 +1,163 @@
+@font-face{
+    font-family: "letra";
+    src: url(tipografia/Orbitron-VariableFont_wght.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "letra";
+}
+body{
+    background-image: url(img/fondoIndex.png);
+    background-size: cover;
+    text-align: center;
+}
+
+/*header*/
+
+
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* Fondo opcional semi-transparente */
+}
+header .navbar{
+    padding-left: 50px;
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+header .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header .navbar ul li {
+    margin-right: 20px; /* Espacio entre ítems */
+}
+
+header .navbar li a{
+    text-decoration: none;
+    color: white ;
+    font-weight: 600;
+    padding: 8px;
+    transition: 0.3s;
+    font-size: 1em;
+    text-transform: uppercase;
+} 
+header .navbar li a:hover{
+    color:  rgb(46, 226, 243);
+}
+
+/*contenido*/ 
+
+.contenido{
+    display: flex; /* Usamos flexbox para alinear el contenido */
+    flex-direction: column; /* Los hijos se alinearán verticalmente */
+    align-items: flex-start; /* Alinea los hijos a la izquierda */
+    justify-content: center; /* Centra los hijos verticalmente en el contenedor */
+    height: 100vh; /* Hace que el div ocupe al menos toda la altura de la ventana */
+    padding-left: 20px; /* Añade un poco de padding a la izquierda si lo necesitas */
+    text-align: left; /* Asegura que el texto dentro esté alineado a la izquierda */
+}
+.tituloBox {
+    display: flex; /* Aplica Flexbox */
+    flex-direction: column; /* Organiza los hijos en columna */
+    align-items: center; /* Alinea los textos al centro horizontalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+.contenido .tituloBox {
+    position: relative;
+    font: 800;
+    text-align: center;
+    font-family: "letra";
+}
+.contenido .tituloBox h1 {
+    font-size: 65px;
+    font-family: "letra";
+    color: white;
+}
+.contenido .tituloBox h2 {
+    font-size: 35px;
+    font-family: "letra";
+    color:  rgb(46, 226, 243);
+}
+
+/*footer*/
+
+.footer {
+    display: flex;
+    align-items: center; /* Alinea verticalmente todos los elementos del footer */
+    justify-content: space-between; /* Alinea los elementos a lo largo del footer */
+    padding: 20px; /* Agrega padding según necesidad */
+    background: rgba(0, 0, 0, 0.6); /* Fondo opcional semi-transparente */
+    color: white; /* Color del texto */
+}
+.container-footer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+.title-footer {
+    font-weight: bold; /* Hace que el título sea más prominente */
+    margin-bottom: 10px; /* Espacio entre el título y la lista */
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos de contacto-info en columna */
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio, que es a la izquierda */
+}
+
+.contact-info ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen para ajustar correctamente */
+}
+
+.redesSociales {
+    display: flex;
+    flex-direction: row; /* Organiza los íconos en fila horizontal */
+    justify-content: flex-end; /* Alinea los íconos al final, que es a la derecha */
+    align-items: center; /* Alinea los íconos verticalmente al centro */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Asegura que no hay margen extra que afecte la alineación */
+}
+.redesSociales ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.redesSociales li {
+    margin-left: 10px;
+}
+
+.redesSociales li a {
+    color: white;
+    font-size: 2.5em; /* Ajusta el tamaño de los íconos si es necesario */
+    transition: color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.redesSociales li:hover a {
+    color: rgb(46, 226, 243); /* Color al pasar el mouse */
+}
+
+
+
+.copyright {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    flex: 1; /* Permite que el bloque tome el espacio necesario para centrarse */
+}

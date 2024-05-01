@@ -1,0 +1,240 @@
+@font-face{
+    font-family: "letra";
+    src: url(tipografia/Orbitron-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: "cursiva";
+    src: url(tipografia/GloriaHallelujah-Regular.ttf);
+}
+
+body{
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-end; 
+    align-items: center; 
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/fondoIndex.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+/*header*/
+
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* Fondo opcional semi-transparente */
+}
+header .navbar{
+    padding-left: 50px;
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+header .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header .navbar ul li {
+    margin-right: 20px; /* Espacio entre ítems */
+}
+
+header .navbar li a{
+    text-decoration: none;
+    color: white ;
+    font-weight: 600;
+    padding: 8px;
+    transition: 0.3s;
+    font-size: 1em;
+    text-transform: uppercase;
+} 
+header .navbar li a:hover{
+    color:  rgb(46, 226, 243);
+}
+
+/*contenido*/
+.main-content {
+    max-height: calc(100vh - 120px);
+}
+.card{
+    
+    position: relative;
+    width: 200px;
+    height: 250px;
+
+    margin: 20px;
+}
+.card-container {  
+    display: flex;
+    flex-direction: row;  
+    width: 100%;  
+    justify-content: center; 
+    padding-bottom: 200px; 
+    margin-bottom: 60px;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    bottom: 0;
+    transform-origin: bottom;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px  #7af1d6;
+    background: transparent; 
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background-color: #7af1d6;
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: rgb(3, 35, 54);
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px  #7af1d6;
+}
+.card .back .link{
+    border-top: 1px white;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a{
+    color: white;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .back p{
+    letter-spacing: 1px;
+    font-size: 11px;
+}
+hr {
+    border: none; 
+    height: 1px; 
+    background-color: #ffffff; 
+    margin: 0; /
+}
+P{
+    color: white;
+}
+h3{
+    color: white;
+}
+.card:hover .front{
+    transform: perspective(600px)rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px)rotateY(360deg);
+}
+
+
+
+/*footer*/
+.footer {
+    width: calc(100% - 40px); /* Ajusta el ancho del footer al 100% menos el padding de 20px en cada lado */
+    position: fixed; /* Fija el footer en la parte inferior de la ventana */
+    bottom: 0; /* Alinea el footer en la parte inferior */
+    left: 0; /* Asegura que el footer comience desde el borde izquierdo */
+    padding: 20px; /* Añade un relleno al footer para separarlo del borde de la ventana */
+    background: rgba(0, 0, 0, 0.6); /* Color de fondo semi-transparente */
+    color: white; /* Color del texto */
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+.title-footer {
+    font-weight: bold; /* Hace que el título sea más prominente */
+    margin-bottom: 10px; /* Espacio entre el título y la lista */
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos de contacto-info en columna */
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio, que es a la izquierda */
+}
+
+.contact-info ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen para ajustar correctamente */
+}
+
+.redesSociales {
+    display: flex;
+    flex-direction: row; /* Organiza los íconos en fila horizontal */
+    justify-content: flex-end; /* Alinea los íconos al final, que es a la derecha */
+    align-items: center; /* Alinea los íconos verticalmente al centro */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Asegura que no hay margen extra que afecte la alineación */
+}
+.redesSociales ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.redesSociales li {
+    margin-left: 10px;
+}
+
+.redesSociales li a {
+    color: white;
+    font-size: 2.5em; /* Ajusta el tamaño de los íconos si es necesario */
+    transition: color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.redesSociales li:hover a {
+    color: rgb(46, 226, 243); /* Color al pasar el mouse */
+}
+
+
+
+.copyright {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    flex: 1; /* Permite que el bloque tome el espacio necesario para centrarse */
+}
